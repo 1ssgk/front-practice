@@ -15,6 +15,8 @@ import Order from "./pages/order/Order";
 import OrderDetail from "./pages/order/OrderDetail";
 import FileUpload from "./pages/file/FileUpload";
 import FileList from "./pages/file/FileList";
+import ChatRoom from "./pages/chatting/Room";
+import ChatList from "./pages/chatting/List";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,9 @@ const router = createBrowserRouter([
           { path: "/order/:id", element: <OrderDetail /> },
           { path: "/file/upload", element: <FileUpload /> },
           { path: "/file/list", element: <FileList /> },
-
+          { path: "/chatting/list", element: <ChatList/> },
+          { path: "/chatting/room/:id", element: <ChatRoom /> },
+          
         ],
       },
       /* Admin 화면 */
@@ -72,9 +76,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
